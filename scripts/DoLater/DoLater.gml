@@ -275,7 +275,7 @@ function DoLaterListenReset(){
 
 // Remove a listener from list 
 // Spects a previous created struct with DoLaterListen
-function DoLaterListerRemove(struct_ref){
+function DoLaterListenRemove(struct_ref){
 	var _list = global.__DoLaterListen[? struct_ref.message];
 	if(_list != undefined){
 		var _i = 0;
