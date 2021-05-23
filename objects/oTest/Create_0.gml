@@ -8,4 +8,4 @@ struct = DoLaterListen("Teste", printTeste, noone, false);
 struct2 = DoLaterListen("Teste", printTeste, noone, false);
 
 DoLaterBroadcast("Teste", noone);
-DoLaterListerRemove(struct2);
+DoLaterListenRemove(struct2);

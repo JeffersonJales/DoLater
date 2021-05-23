@@ -10,7 +10,7 @@ global.__DoLaterTrigger  = ds_list_create();
 global.__DoLaterAsync    = ds_list_create()
 
 global.__DoLaterListen   = ds_map_create();
-global.__DoLaterListerDebug = true;
+global.__DoLaterListenDebug = true;
 
 //Queue a function for execution after a period of time
 //The "delay" parameter is in frames (though DoLaterTick() allows for delta timing)
@@ -182,7 +182,7 @@ function DoLaterListen(message, callbackFunction, callbackData, once){
 
 //Broadcast a message that is picked up by functions defined via DoLaterListen()
 function DoLaterBroadcast(message, broadcastData){
-  if(global.__DoLaterListerDebug)
+  if(global.__DoLaterListenDebug)
 		show_debug_message("Event Broadcast: " + string(message));
 
 	var list = global.__DoLaterListen[? message];
